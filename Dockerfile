@@ -7,9 +7,9 @@ RUN apt-get install -yqq vim make gcc ctags linux-headers-3.16.0-57-generic cras
 
 VOLUME [ "/opt" ]
 
-ADD https://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.34.tar.xz ~/linux-2.6.34.tar.xz
-ADD vim.configs.tar.bz2 ~/
-ADD kernel_sample.tar.bz2 ~/
+ADD https://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.34.tar.bz2 work/
+ADD vim.configs.tar.bz2 root/
+ADD kernel_sample.tar.bz2 work/
 
-WORKDIR ~/kernel_sample
-RUN [ "ctags", "-R", "~/linux-2.6.34" ]
+WORKDIR work/kernel_sample
+RUN [ "ctags", "-R", "/work/linux-2.6.34" ]
