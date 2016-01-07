@@ -3,7 +3,7 @@ MAINTAINER Alex Huang "nikshuang@163.com"
 ENV REFRESHED_AT 2016-1-7
 
 RUN apt-get -qq update
-RUN apt-get install -yqq vim make gcc ctags linux-headers-`uname -r`
+RUN apt-get install -yqq vim make gcc ctags linux-headers-3.16.0-57-generic crash
 
 VOLUME [ "/opt" ]
 
