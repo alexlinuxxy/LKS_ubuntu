@@ -9,4 +9,4 @@ VOLUME [ "/volume" ]
 WORKDIR ~/work
 RUN /usr/bin/wget https://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.34.tar.xz
 RUN /bin/tar xf linux-2.6.34.tar.xz
-ADD vim.config.tar.bz2 ~/
+ADD vim.configs.tar.bz2 ~/
