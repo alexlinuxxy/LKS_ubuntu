@@ -8,9 +8,9 @@ RUN [ "locale-gen", "zh_CN.GB18030" ]
 
 ADD https://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.34.tar.bz2 root/
 ADD vim.configs.tar.bz2 root/
-ADD kernel_sample.tar.bz2 root/
+ADD kernel_sample.tar.bz2 work/
 
 WORKDIR work
 
-ENTRYPOINT [ "ctags", "-R", "linux-2.6.34" ]
-CMD [ "/bin/bash" ]
+RUN [ "tar", "xf", "/root/linux-2.6.34.tar.bz2" ]
+RUN [ "ctags", "-R", "/work/linux-2.6.34" ]
