@@ -13,3 +13,4 @@ ADD kernel_sample.tar.bz2 root/
 WORKDIR work
 
 ENTRYPOINT [ "ctags", "-R", "linux-2.6.34" ]
+CMD [ "/bin/bash" ]
